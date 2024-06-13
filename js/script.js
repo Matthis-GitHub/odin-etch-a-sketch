@@ -1,9 +1,9 @@
+const gridContainer = document.querySelector(".grid-container");
+
 function createGrid() {
   const rows = 16;
   const columns = 16;
   const gridSize = rows * columns;
-
-  const gridContainer = document.querySelector(".grid-container");
 
   for (let i = 0; i < gridSize; i++) {
     const square = document.createElement("div");
@@ -12,4 +12,14 @@ function createGrid() {
   }
 }
 
+function addMouseEnterEventListener() {
+  const squares = document.querySelectorAll(".square");
+  squares.forEach((square) => {
+    square.addEventListener("mouseenter", () =>
+      square.classList.add("colorized")
+    );
+  });
+}
+
 createGrid();
+addMouseEnterEventListener();
