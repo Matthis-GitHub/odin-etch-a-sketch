@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(16, 25, 40);
 }
 
 *,
@@ -8,10 +9,17 @@ html {
 *:after {
   box-sizing: inherit;
 }
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
 
 .grid-container {
   display: flex;
   flex-wrap: wrap;
+  background-color: rgb(209, 213, 219);
 }
 
 .square {
@@ -20,4 +28,12 @@ html {
 
 .colorized {
   background-color: black;
+}
+
+.choose-squares {
+  border: 2px solid rgba(229, 231, 235, 0.05);
+  border-radius: 8px;
+  padding: 4px 12px;
+  color: rgb(209, 213, 219);
+  background-color: rgb(31, 41, 55);
 }
